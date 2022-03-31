@@ -126,6 +126,70 @@ ol i:hover {
     color: #9356DC;
 }
 
+/* MAIN */
+article {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 25px 0px 25px;
+    border-radius: 15px;
+}
+
+article div {
+    display: flex;
+    flex-direction: column;
+    column-gap: 20px;
+    height: 250px;
+}
+
+article div:nth-of-type(odd) {
+    height: 250px;
+}
+article div:nth-of-type(even) {
+    height: 100px;
+    box-shadow: 5px 5px 5px var(--lightgrey);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+main span {
+    position: absolute;
+    color: green;
+    font-weight: bold;
+    border: #99E2D0 solid;
+    padding: 10px 15px;
+    background-color: #99E2D0;
+    border-radius: 3px;
+    margin-top: 15px;
+    right: 40px;
+}
+
+main img {
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+main h3, p {
+    margin: 0;
+    font-size: 22px;
+    color: black;
+    margin: 15px 0px 0px 15px
+}
+
+article i {
+    position: absolute;
+    right: 60px;
+    margin-top: 40px;
+    font-size: 30px;
+}
+
+
+
 
 
 
