@@ -212,7 +212,33 @@ article i {
     color: black;
 }
 
+/* FOOTER */
+footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    background-color: #353535;
+    padding: 30px 0px 30px 30px;
+}
 
+footer img {
+    width: 150px; 
+    margin-bottom: 20px;
+    filter: invert(100%);
+}
+
+footer a {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    column-gap: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+footer p {
+    margin: 10px 0px;
+}
 
 
 
