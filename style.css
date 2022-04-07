@@ -240,6 +240,37 @@ footer p {
     margin: 10px 0px;
 }
 
+/* MEDIA QUERY */
+@media screen and (min-width: 992px) {
+
+    /* Section Two */
+    ol {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    li {
+        min-width: 30%;
+    }
+
+    /* Main */
+    main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    main h2 {
+        width: 100%;
+    }
+
+    main a {
+        width: 50%;
+    }
+}
+
 
 
 
