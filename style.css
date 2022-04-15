@@ -12,11 +12,11 @@ body {
     --secondary: #FF79DA;
     --tertiary: #99E2D0;
 
-    --grey:#4D4D4D; 
     --darkgrey:#353535;
+    --grey:#4D4D4D; 
+    --mediumgrey: #7E7E7E;
     --lightgrey: #EAEAEA;
     --verylightgrey: #F6F6F6;
-    --mediumgrey: #7E7E7E;
 }
 
 h1, h2 {
@@ -89,34 +89,35 @@ h2 {
 }
 
 ol {
-    counter-reset: section;
+  counter-reset: section;
+  /* list-style-type: none; */
+}
+
+ol li::before {
+  background-color: #9356dc;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+  margin-left: -15px;
+  counter-increment: section;
+  content: counters(section,".") " ";
+}
+
+ol li {
+    text-align: left;
     list-style-type: none;
-    padding: 0;
-}
-
-li::before {
-    counter-increment: section;
-    content: counters(section,".");
-}
-
-ol li{
     display: flex;
-    flex-direction: row;
     align-items: center;
     background-color: var(--verylightgrey);
-    margin: 20px;
-    padding: 20px;
-    font-size: 20px;
     border-radius: 30px;
+    margin: 20px;
     box-shadow: 5px 5px 5px var(--lightgrey);
-    /*background: #9356dc;
-    height: 1.5rem;
-    width: 1.5rem;
-    border-radius: 100px;
-    color: #fff;
-    left: -0.75rem;*/
+  
 }
   
+li h3 {
+      padding: 20px;
+  }
     
 ol li:hover {
     background-color: #F5EDFF;
@@ -125,8 +126,7 @@ ol li:hover {
 ol i {
     color: var(--mediumgrey);
     font-size: 20px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding: 0px 10px 0px 30px;
 }
 
 ol i:hover {
@@ -145,12 +145,12 @@ article div {
     display: flex;
     flex-direction: column;
     column-gap: 20px;
-    height: 250px;
 }
 
 article div:nth-of-type(odd) {
     height: 250px;
 }
+
 article div:nth-of-type(even) {
     height: 100px;
     box-shadow: 5px 5px 5px var(--lightgrey);
@@ -159,20 +159,24 @@ article div:nth-of-type(even) {
 }
 
 main span {
-    position: absolute;
+    position: relative;
     color: green;
     font-weight: bold;
     border: #99E2D0 solid;
     padding: 10px 15px;
     background-color: #99E2D0;
     border-radius: 3px;
-    margin-top: 15px;
-    right: 40px;
+    top: 25%;
+    left: 75%;
+    width: 100px;
+    z-index: +3;
 }
 
 main img {
+    
     height: 100%;
     object-fit: cover;
+    overflow: hidden;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
