@@ -166,14 +166,14 @@ main span {
     padding: 10px 15px;
     background-color: #99E2D0;
     border-radius: 3px;
+    z-index: -1;
     top: 25%;
     left: 75%;
     width: 100px;
-    z-index: +3;
 }
 
 main img {
-    
+    z-index: -2;
     height: 100%;
     object-fit: cover;
     overflow: hidden;
@@ -193,10 +193,12 @@ main h3, main p {
 }
 
 article i {
-    position: absolute;
-    right: 60px;
+    position: relative;
     margin-top: 40px;
     font-size: 30px;
+    z-index: -1;
+    bottom: 80px;
+    left: 400px;
 }
 
 .fa-solid.fa-heart {
@@ -244,6 +246,102 @@ footer p {
     margin: 10px 0px;
 }
 
+/*OPTION 1*/
+/* Page incliquable!! */
+ /* .loader {
+    transform-origin: bottom;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    animation: loader 5s forwards;
+}
+
+@keyframes loader {
+    from {
+        background-color: hsla(0,0%,100%,.9);
+
+    }
+    to {
+        background-color: hsla(0,0%,100%,0.9);
+        z-index: -10;
+    }
+}
+
+.circle {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    animation: grow 1.5s linear 2;
+    transform: scale(0);
+    margin: -5px;
+    z-index: 2;
+}
+
+.circle:nth-child(2) {
+    background-color: var(--secondary);
+    animation-delay: 0.5s;
+}
+
+.circle:nth-child(3) {
+    background-color: var(--tertiary);
+    animation-delay: 1s;
+}
+
+@keyframes grow {
+    20%, 100% {
+        transform: scale(1);
+    }
+} */
+
+
+
+
+
+/* OPTION 2 */
+/* 
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    font-size: 50px;
+    font-family: "Shrikhand";
+    background: linear-gradient(to bottom left, var(--primary), var(--secondary), var(--tertiary));
+    animation: tracking-in-expand-fwd 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    height: 100%; width: 100%;
+    left: 0; top: 0;
+    background-color: hsla(0,0%,100%,.9);
+}
+
+@keyframes tracking-in-expand-fwd {
+    0% {
+        letter-spacing: -80px;
+        transform: translateZ(-700px);
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateZ(0);
+        opacity: 1;
+    }
+    /* How to make it disapear?? */
+
+
+
+
+
+
+
 /* MEDIA QUERY */
 @media screen and (min-width: 992px) {
 
@@ -274,6 +372,7 @@ footer p {
         width: 50%;
     }
 }
+
 
 
 
