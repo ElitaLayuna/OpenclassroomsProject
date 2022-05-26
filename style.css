@@ -26,7 +26,7 @@ h1, h2 {
 
 /* LOADER */
 
-/* .loader {
+.loader {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,7 +38,7 @@ h1, h2 {
     background: linear-gradient(to top left, var(--primary), 
     var(--secondary), var(--tertiary));
     height: 100%; width: 100%;
-}  */
+} 
 
 @keyframes textloader {
     0% {

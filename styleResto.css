@@ -88,7 +88,7 @@ main div:nth-child(1) i {
     opacity: 0;
 }
 
-.fa-solid.fa-heart:hover {
+.fa-solid.fa-heart:hover, .fa-solid.fa-heart:active {
     opacity: 1;
     background: linear-gradient(to bottom left, var(--primary), var(--secondary));
     color: transparent;
@@ -194,7 +194,7 @@ article div:nth-child(3){
     transition-duration: 0.5s;
 }
 
-article div:nth-child(1):hover ~div:nth-child(3) {
+article:hover div:nth-of-type(3), article:active div:nth-child(3) {
     margin-right: -16px;
 }
 
@@ -207,12 +207,12 @@ article div:nth-child(3) i {
     height: 35px; 
     width: 35px;
     background-color: white;
-    transform: rotate(350deg);
+    transform: rotate(360deg);
     transition-duration: 0.5s;
     color: var(--tertiary);
 }
 
-article div:nth-child(1):hover ~div:nth-child(3) i {
+article:hover div:nth-child(3) i, article:active div:nth-child(3) i {
     transform: rotate(0);
 }
 
@@ -239,7 +239,7 @@ button {
     transition: 0.4s;
 }
 
-button:hover {
+button:hover, button:active {
     opacity: 0.6;
     box-shadow: 5px 5px 5px var(--mediumgrey);
 }
