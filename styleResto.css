@@ -240,7 +240,7 @@ button {
     transition: 0.4s;
 }
 
-button:hover {
+button:hover, button:active {
     opacity: 0.6;
     box-shadow: 5px 5px 5px var(--mediumgrey);
 }

@@ -33,7 +33,7 @@ h1, h2 {
     position: fixed;
     font-size: 50px;
     font-family: "Shrikhand";
-    animation: textloader 3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation: textloader 2s cubic-bezier(0.215, 0.610, 0.355, 1.000);
     animation-fill-mode: both;
     background: linear-gradient(to top left, var(--primary), 
     var(--secondary), var(--tertiary));
